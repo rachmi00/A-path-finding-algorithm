@@ -51,3 +51,22 @@ class Sqaure:
     
     def reset(self):
         self.color = WHITE
+
+## assignung the colors to the squares
+    def make_closed(self):
+        self.color = RED
+    
+    def make_open(self):
+        self.color = GREEN
+
+    def make_barrier(self):
+        self.color = BLACK
+    
+    def make_end(self):
+        self.color = TURQUOISE
+
+    def make_path(self):
+        self.color = PURPLE 
+
+    def draw(self, win):
+        pygame.draw.rect(win, self.color, (self.x, self.y, self.width, self.width))
