@@ -70,3 +70,15 @@ class Sqaure:
 
     def draw(self, win):
         pygame.draw.rect(win, self.color, (self.x, self.y, self.width, self.width))
+
+    def update_neighbors(self, grid):
+        pass
+
+    def __lt__(self, other):
+        return False
+    
+ # Heuristic function for A* algorithm (Manhattan distance).. ie the shortest L disatance between two points
+def h(p1, p2):
+    x1, y1 = p1
+    x2, y2 = p2
+    return abs(x1 - x2) + abs(y1 - y2)
