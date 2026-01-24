@@ -32,3 +32,22 @@ class Sqaure:
     
     def get_pos(self):
         return self.row, self.col
+    
+    #if the square is red it has already been considered
+    def is_closed(self):
+        return self.color == RED
+    
+    def is_open(self):
+        return self.color == GREEN
+    
+    def is_barrier(self):
+        return self.color == BLACK
+    
+    def is_start(self):
+        return self.color == ORANGE
+    
+    def is_end(self):
+        return self.color == TURQUOISE
+    
+    def reset(self):
+        self.color = WHITE
